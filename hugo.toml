@@ -1,0 +1,55 @@
+# ==================== 基础站点设置 (您已有的部分) ====================
+baseURL = "https://turandoleung.github.io/"
+defaultContentLanguage = "zh"
+languageCode = "zh-Hans"
+title = "turando’s blog"
+theme = "dreammaster"
+enableRobotsTXT = true
+hasCJKLanguage = true
+
+# ==================== 主题核心参数 ====================
+[params]
+  # 必需参数：设置明暗模式的主题，对应示例网站的外观
+  lightTheme = "emerald"   # 亮色主题
+  darkTheme = "forest"     # 暗色主题
+
+  # 基础信息
+  author = "turando"
+  avatar = "/img/avatar.jpg"
+  description = "turando 的生活记录～" # 网站的meta描述
+  # 网站主标题与副标题（motto），这是您截图中的第一行和第二行
+  headerTitle = "turando’s blog"
+  motto = "完美毕业 好的机缘 Enjoy job"
+  favicon = "favicon.png"
+  collapseNavItems = ["posts", "categories", "tags"]
+
+  # 功能开关
+  rss = true               # 开启RSS订阅
+  search = true            # 开启搜索
+  displayMode = true       # 开启明暗模式切换
+  stickyNav = true         # 启用滚动时固定的导航栏
+  showTableOfContents = true # 在文章页显示目录
+  showPrevNextPost = true  # 在文章页显示“上一篇/下一篇”
+  enableGitInfo = true     # 文章发布时间同Git
+  
+  # 页脚信息
+  siteStartYear = 2026     # 博客起始年份，页脚会显示为“2024 - 当前年”
+  # footerBottomText = "自定义页脚文本" # 可选，如需覆盖默认的“Powered by Hugo”文本
+
+  # 社交与联系（请将 # 替换为您的真实信息）
+  email = "lyf793227@gmail.com"
+  # utterancesRepo = "your-github-username/your-repo" # 如需基于GitHub Issues的评论
+
+  # 文章列表与封面图
+  # noDefaultSummaryCover = true # 如果不想在文章列表显示默认封面图，可取消注释
+  showSummaryCoverInPost = true # 在文章内显示封面图
+  imageZoomableInPost = true    # 允许点击文章内图片放大
+
+# ==================== 高级与实验性参数（可暂时跳过） ====================
+# 除非有特定需求，否则以下部分可以稍后再配置
+# [params.advanced]
+#   customCSS = ["css/custom.css"]
+#
+# [params.experimental]
+#   jsDate = true
+#   jsDateFormat = "yyyy年MM月dd日"

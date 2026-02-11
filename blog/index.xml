@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on turando’s blog</title>
+    <link>https://turandoleung.github.io/blog/</link>
+    <description>Recent content in Blogs on turando’s blog</description>
+    <generator>Hugo</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Thu, 05 Feb 2026 22:49:50 +0800</lastBuildDate>
+    <atom:link href="https://turandoleung.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>博客标题</title>
+      <link>https://turandoleung.github.io/blog/first/</link>
+      <pubDate>Thu, 05 Feb 2026 22:49:50 +0800</pubDate>
+      <guid>https://turandoleung.github.io/blog/first/</guid>
+      <description>&lt;p&gt;这是摘要&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
