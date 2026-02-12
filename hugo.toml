@@ -38,8 +38,8 @@ hasCJKLanguage = true
 
   # 社交与联系（请将 # 替换为您的真实信息）
   email = "lyf793227@gmail.com"
-  # utterancesRepo = "your-github-username/your-repo" # 如需基于GitHub Issues的评论
-
+  utterancesRepo = "turandoleung/turandoleung.github.io"  # 如需基于GitHub Issues的评论
+  
   # 文章列表与封面图
   # noDefaultSummaryCover = true # 如果不想在文章列表显示默认封面图，可取消注释
   showSummaryCoverInPost = true # 在文章内显示封面图
