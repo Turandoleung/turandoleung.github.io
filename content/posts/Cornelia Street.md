@@ -14,7 +14,7 @@ categories:
 tags:
   - 灥
 # nolastmod: true
-draft: true
+draft: false
 ---
 
 专门开个帖子怀念和小灥的日常吧。应该是不会复合了，太累了。
