@@ -5,7 +5,7 @@ lastmod: 2026-07-06T22:02:25+08:00
 author: Author Name
 # avatar: /img/author.jpg
 # authorlink: https://author.site
-cover: /img/cover.jpg
+# cover: /img/cover.jpg
 # images:
 #   - /img/cover.jpg
 categories:
