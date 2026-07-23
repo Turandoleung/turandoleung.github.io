@@ -44,6 +44,7 @@ hasCJKLanguage = true
   # noDefaultSummaryCover = true # 如果不想在文章列表显示默认封面图，可取消注释
   showSummaryCoverInPost = true # 在文章内显示封面图
   imageZoomableInPost = true    # 允许点击文章内图片放大
+  randomCoverFolder = "images" # 未指定 cover 时，从 /images 目录随机挑选封面
 
 # ==================== 高级与实验性参数（可暂时跳过） ====================
 # 除非有特定需求，否则以下部分可以稍后再配置

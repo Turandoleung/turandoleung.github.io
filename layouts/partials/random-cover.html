@@ -1,0 +1,33 @@
+{{- $context := .context -}}
+{{- $alt := .alt -}}
+{{- $folder := default "images" site.Params.randomCoverFolder -}}
+{{- $matchPattern := printf "%s/*" $folder -}}
+{{- $coverResources := slice -}}
+
+{{- range resources.Match $matchPattern -}}
+  {{- $ext := lower (path.Ext .Name) -}}
+  {{- if in (slice ".jpg" ".jpeg" ".png" ".webp" ".gif" ".svg") $ext -}}
+    {{- $coverResources = $coverResources | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if gt (len $coverResources) 0 -}}
+  {{- $selected := index (shuffle $coverResources) 0 -}}
+  {{- if eq $selected.MediaType.SubType "svg" -}}
+    <img src="{{ $selected.RelPermalink }}" alt="{{ $alt }}" />
+  {{- else -}}
+    {{- $webp := $selected.Resize (printf "%dx%d webp" $selected.Width $selected.Height) -}}
+    <picture>
+      <source srcset="{{ $webp.RelPermalink }}" type="image/webp" />
+      <img src="{{ $selected.RelPermalink }}" alt="{{ $alt }}" />
+    </picture>
+  {{- end -}}
+{{- else -}}
+  {{- with resources.Get (printf "images/default%d.jpg" (index (seq 4 | shuffle) 0)) -}}
+    {{- $webp := .Resize (printf "%dx%d webp" .Width .Height) -}}
+    <picture>
+      <source srcset="{{ $webp.RelPermalink }}" type="image/webp" />
+      <img src="{{ .RelPermalink }}" alt="{{ $alt }}" />
+    </picture>
+  {{- end -}}
+{{- end -}}
