@@ -75,13 +75,22 @@
       </header>
 
       <section id="dream-single-post-content" itemprop="articleBody">
-        {{ if and .Params.Cover site.Params.showSummaryCoverInPost }}
+        {{ if site.Params.showSummaryCoverInPost }}
+          {{ $coverSrc := .Params.Cover | default "" }}
+          {{ if not $coverSrc }}
+            {{ $defaults := resources.Match "images/default*.jpg" }}
+            {{ with index ($defaults | shuffle) 0 }}
+              {{ $coverSrc = .RelPermalink }}
+            {{ end }}
+          {{ end }}
+          {{ if $coverSrc }}
           <figure>
-            <img class="z-30" src="{{ .Params.Cover }}" alt="{{ .Title }}" />
+            <img class="z-30" src="{{ $coverSrc }}" alt="{{ .Title }}" />
             {{ with .Params.covercaption }}
               <figcaption class="text-sm italic text-center mt-2">{{ . }}</figcaption>
             {{ end }}
           </figure>
+          {{ end }}
         {{ end }}
 
         {{ .Content | emojify }}
